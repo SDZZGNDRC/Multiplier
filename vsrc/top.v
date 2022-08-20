@@ -23,9 +23,9 @@ module top (
     assign op_1 = (sign_op_1_i==1'b1) ? {{1{op_1_i[63]}}, op_1_i} : {1'b0, op_1_i};
     assign op_2 = (sign_op_2_i==1'b1) ? {{1{op_2_i[63]}}, op_2_i} : {1'b0, op_2_i};
 
-    /* generate 32 partial products */
-    wire[129:0] pd0[0:31];
-    wire[129:0] pd0_t[0:31];
+    /* generate 33 partial products */
+    wire[129:0] pd0[0:32];
+    wire[129:0] pd0_t[0:32];
     genvar i;
     generate for(i = 0; i < 32; i = i+1)
         begin : gfor
@@ -36,8 +36,9 @@ module top (
             );
         end
     endgenerate
+    assign pd0_t[32] = (op_2[0]==1'b1) ? ~{{65{op_1[64]}}, op_1}+130'd1 : 130'd0;
 
-    generate for(i = 0; i < 32; i = i+1)
+    generate for(i = 0; i < 33; i = i+1)
         begin : reg_gfor
             Reg #(130, 130'h0) reg_pd0 (
                 .clk(clk),
@@ -49,11 +50,11 @@ module top (
         end
     endgenerate
 
-    /* Layer 1: 32 partial products, 10 csadder, 0 full-adder, left 2
+    /* Layer 1: 33 partial products, 11 csadder, 0 full-adder, left 0
        Generate 22 partial products */
     wire[129:0] pd1[0:21];
     wire[129:0] pd1_t[0:21];
-    generate for(i = 0; i < 10; i = i+1)
+    generate for(i = 0; i < 11; i = i+1)
         begin : f1
             CSAdder130 CSAdder130_f1(
                 .a(pd0[3*i]),
@@ -65,8 +66,6 @@ module top (
             );
         end
     endgenerate
-    assign pd1_t[20] = pd0[30];
-    assign pd1_t[21] = pd0[31];
 
     generate for(i = 0; i < 22; i = i+1)
         begin : reg_f1
