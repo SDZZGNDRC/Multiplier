@@ -1,33 +1,85 @@
 [*]
 [*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
-[*] Sat Aug 20 11:35:38 2022
+[*] Sat Aug 20 12:34:24 2022
 [*]
 [dumpfile] "/home/sdzz/project/Multiplier/logs/vlt_dump.vcd"
-[dumpfile_mtime] "Sat Aug 20 11:35:05 2022"
-[dumpfile_size] 200081
+[dumpfile_mtime] "Sat Aug 20 11:58:26 2022"
+[dumpfile_size] 2032971
 [savefile] "/home/sdzz/project/Multiplier/logs/vlt_dump.gtkw"
-[timestart] 1
+[timestart] 14
 [size] 1920 1016
 [pos] -1 -1
-*0.000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*0.000000 28 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] TOP.
 [treeopen] TOP.top.
+[treeopen] TOP.top.gfor(0).
 [sst_width] 233
-[signals_width] 148
+[signals_width] 302
 [sst_expanded] 1
 [sst_vpaned_height] 289
 @28
 TOP.top.clk
 TOP.top.block_i
-@22
+@24
 TOP.top.op_1_i[63:0]
 TOP.top.op_2_i[63:0]
 @28
 TOP.top.sign_op_1_i
 TOP.top.sign_op_2_i
-@22
+@24
 TOP.top.op_1[64:0]
-@23
 TOP.top.op_2[64:0]
+@22
+TOP.top.pre_state[3:0]
+TOP.top.next_state[3:0]
+TOP.top.pd7(0)[129:0]
+TOP.top.pd7(1)[129:0]
+TOP.top.pd8[129:0]
+TOP.top.result_l_o[63:0]
+TOP.top.result_h_o[63:0]
+@28
+TOP.top.ready_o
+TOP.top.valid_o
+@201
+-=================gfor(0)
+@22
+TOP.top.gfor(0).booth2.L[31:0]
+TOP.top.gfor(0).booth2.temp[129:0]
+TOP.top.gfor(0).booth2.p[129:0]
+@200
+-=================PD0
+@22
+TOP.top.pd0(0)[129:0]
+TOP.top.pd0(1)[129:0]
+TOP.top.pd0(2)[129:0]
+TOP.top.pd0(3)[129:0]
+TOP.top.pd0(4)[129:0]
+TOP.top.pd0(5)[129:0]
+TOP.top.pd0(6)[129:0]
+TOP.top.pd0(7)[129:0]
+TOP.top.pd0(8)[129:0]
+TOP.top.pd0(9)[129:0]
+TOP.top.pd0(10)[129:0]
+TOP.top.pd0(11)[129:0]
+TOP.top.pd0(12)[129:0]
+TOP.top.pd0(13)[129:0]
+TOP.top.pd0(14)[129:0]
+TOP.top.pd0(15)[129:0]
+TOP.top.pd0(16)[129:0]
+TOP.top.pd0(17)[129:0]
+TOP.top.pd0(18)[129:0]
+TOP.top.pd0(19)[129:0]
+TOP.top.pd0(20)[129:0]
+TOP.top.pd0(21)[129:0]
+TOP.top.pd0(22)[129:0]
+TOP.top.pd0(23)[129:0]
+TOP.top.pd0(24)[129:0]
+TOP.top.pd0(25)[129:0]
+TOP.top.pd0(26)[129:0]
+TOP.top.pd0(27)[129:0]
+TOP.top.pd0(28)[129:0]
+TOP.top.pd0(29)[129:0]
+TOP.top.pd0(30)[129:0]
+TOP.top.pd0(31)[129:0]
 [pattern_trace] 1
 [pattern_trace] 0

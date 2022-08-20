@@ -2,7 +2,7 @@
 #include "verilated.h"
 
 #define MOSTCYCLE 1000
-#define MAXOP 1000
+#define MAXOP 10
 uint8_t req_valid_flag = 0;
 uint8_t has_valid = 1;
 uint64_t op_1;

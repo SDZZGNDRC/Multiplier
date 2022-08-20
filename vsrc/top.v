@@ -31,7 +31,7 @@ module top (
         begin : gfor
             Booth2 #(.L(2*i+1)) booth2(
                 .op2_slice(op_2[2*i+2:2*i]),
-                .op1({{65{op_1[63]}}, op_1}),
+                .op1({{65{op_1[64]}}, op_1}),
                 .p(pd0_t[i])
             );
         end

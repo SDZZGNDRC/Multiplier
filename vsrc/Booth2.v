@@ -31,6 +31,6 @@ assign temp = ({130{op2_slice == 3'd0}} & zero)
             | ({130{op2_slice == 3'd6}} & p3)
             | ({130{op2_slice == 3'd7}} & zero);
 
-assign p = {temp[129-2*L:0], {2*L{1'd0}}};
+assign p = {temp[129-L:0], {L{1'd0}}};
 /* verilator lint_on UNUSED */
 endmodule
